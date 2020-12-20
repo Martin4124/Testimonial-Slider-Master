@@ -1,0 +1,38 @@
+@import "./utilities";
+@import "./main";
+@import "./keyframes";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  font-size: 32px;
+  text-align: center;
+  font-family: $ff-primary;
+  background-image: url(/images/pattern-bg.svg), url(/images/pattern-quotes.svg),
+    url(/images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 80vmin, 15vmin, 50vw;
+  background-position: center 2em, center 50%, left bottom;
+}
+
+@media only screen and(min-width: 400px) {
+  body {
+    background-position: center 2em, center 50%, left bottom;
+    background-size: 80vmin, 20vmin, 50vw;
+  }
+}
+@media only screen and(min-width: 800px) {
+  body {
+    background-position: 40vw center, 20vw 25vh, left bottom;
+  }
+}
+@media only screen and(min-width: 1000px) {
+  body {
+    font-size: 32px;
+  }
+}

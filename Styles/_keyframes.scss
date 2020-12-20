@@ -1,0 +1,16 @@
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-30vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+@keyframes slide-in-side {
+  0% {
+    transform: translateY(50vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
