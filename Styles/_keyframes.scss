@@ -1,16 +1,53 @@
-@keyframes slide-in-top {
+@keyframes slide-out {
   0% {
-    transform: translateY(-30vh);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateY(0vh);
+    transform: translateX(100vw);
   }
 }
-@keyframes slide-in-side {
+@keyframes slide-in {
   0% {
-    transform: translateY(50vh);
+    transform: translateX(-100vw);
   }
   100% {
-    transform: translateY(0vh);
+    transform: translateX(0vw);
   }
+}
+@keyframes slide-out-reverse {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes slide-in-reverse {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+.slide-out {
+  animation-name: slide-out;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+.slide-out-reverse {
+  animation-name: slide-out-reverse;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+.slide-in-reverse {
+  animation-name: slide-in-reverse;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
 }

@@ -18,6 +18,8 @@ body {
   background-repeat: no-repeat;
   background-size: 80vmin, 15vmin, 50vw;
   background-position: center 2em, center 50%, left bottom;
+  overflow: hidden;
+  height: 100%;
 }
 
 @media only screen and(min-width: 400px) {

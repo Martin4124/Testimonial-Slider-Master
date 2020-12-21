@@ -8,73 +8,52 @@ const prof = document.querySelector(".profession")
 const animation = document.querySelector(".animation")
 const text = document.querySelector(".text")
 const btndiv = document.querySelector(".buttons")
+const main = document.getElementById("js-main")
 
 next.addEventListener("click", nextEvent);
 prev.addEventListener("click", prevEvent);
 
-text.classList.add("animation-side")
-    setTimeout(function(){
-        text.classList.remove("animation-side")
-    }, 2000)
-
-    img.classList.add("animation-top")
-    setTimeout(function(){
-        img.classList.remove("animation-top")
-    }, 2000)
-
-    btndiv.classList.add("animation-top")
-    setTimeout(function(){
-        btndiv.classList.remove("animation-top")
-    }, 2000)
 
 
 function nextEvent(e){
     e.preventDefault();
 
+    main.classList.add("slide-out")
+    setTimeout(function(){
+        main.classList.remove("slide-out")
+    }, 2100)
+    main.addEventListener("animationend", finished)
+    function finished(){
+
     img.src="images/image-john.jpg"
-
-    text.classList.add("animation-side")
-    setTimeout(function(){
-        text.classList.remove("animation-side")
-    }, 2000)
-
-    img.classList.add("animation-top")
-    setTimeout(function(){
-        img.classList.remove("animation-top")
-    }, 2000)
-
-    btndiv.classList.add("animation-top")
-    setTimeout(function(){
-        btndiv.classList.remove("animation-top")
-    }, 2000)
-
     com.textContent ='" If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. "'
     names.textContent = 'John Tarkpor'
-    prof.textContent = 'Junior Front-end Developer' 
+    prof.textContent = 'Junior Front-end Developer'
+    main.classList.add("slide-in")
+        setTimeout(function(){
+            main.classList.remove("slide-in")
+        }, 2000)
+    }
 }
 
 function prevEvent(e){
     e.preventDefault();
 
+    main.classList.add("slide-out-reverse")
+    setTimeout(function(){
+        main.classList.remove("slide-out-reverse")
+    }, 2100)
+    main.addEventListener("animationend", finished2)
+    function finished2(){
+
     img.src="images/image-tanya.jpg"
-
-    text.classList.add("animation-top")
-    setTimeout(function(){
-        text.classList.remove("animation-top")
-    }, 2000)
-
-    img.classList.add("animation-side")
-    setTimeout(function(){
-        img.classList.remove("animation-side")
-    }, 2000)
-
-    btndiv.classList.add("animation-side")
-    setTimeout(function(){
-        btndiv.classList.remove("animation-side")
-    }, 2000)
-
     com.textContent ='“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”'
     names.textContent = 'Tanya Sinclair'
     prof.textContent = 'UX Engineer'
+    main.classList.add("slide-in-reverse")
+        setTimeout(function(){
+            main.classList.remove("slide-in-reverse")
+        }, 2000) 
+    }
 
 }
