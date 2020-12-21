@@ -13,8 +13,6 @@ const main = document.getElementById("js-main")
 next.addEventListener("click", nextEvent);
 prev.addEventListener("click", prevEvent);
 
-
-
 function nextEvent(e){
     e.preventDefault();
 
@@ -34,6 +32,8 @@ function nextEvent(e){
             main.classList.remove("slide-in")
         }, 2000)
     }
+    prev.disabled = false
+    next.disabled = true
 }
 
 function prevEvent(e){
@@ -55,5 +55,7 @@ function prevEvent(e){
             main.classList.remove("slide-in-reverse")
         }, 2000) 
     }
+    next.disabled = false
+    prev.disabled = true
 
 }
